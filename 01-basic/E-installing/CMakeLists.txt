@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.5)
 
 project(cmake_examples_install)
 
+# Use message command to print a value
+message(STATUS "project source dir: ${PROJECT_SOURCE_DIR}")
+message(STATUS "cmake install prefix: ${CMAKE_INSTALL_PREFIX}")
 ############################################################
 # Create a library
 ############################################################
@@ -34,6 +37,8 @@ target_link_libraries( cmake_examples_inst_bin
 ############################################################
 # Install
 ############################################################
+
+# make install实际上就是做了一些类的拷贝
 
 # Binaries
 install (TARGETS cmake_examples_inst_bin

@@ -18,6 +18,7 @@ endif()
 add_executable(imported_targets main.cpp)
 
 # link against the boost libraries
+# This will automtaically link the Boost::filesystem and Boost::system libraries while also including the Boost include directories.
 target_link_libraries( imported_targets
     PRIVATE
         Boost::filesystem
